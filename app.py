@@ -25,7 +25,7 @@ if fl is not None:
     else:
         df = pd.read_excel(fl)
 else:
-    os.chdir(r"D:\Courses\Python\Sales_Dashboard")
+
     df = pd.read_csv("sales.csv", encoding="ISO-8859-1")
 
 col1, col2 = st.columns((2))
