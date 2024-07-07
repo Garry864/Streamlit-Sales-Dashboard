@@ -185,14 +185,14 @@ if 'question_history' not in st.session_state:
 # Display chat messages from history on app return
 for message in st.session_state.question_history:
     with st.chat_message(message["role"]):
-        st.markdown(message["content"])
+        st.write(message["content"])
         if "image_path" in message:
             st.image(message["image_path"], caption="Sample Chart", use_column_width=True)
 
 if chat_input := st.chat_input("Ask a question about the data"):
     try:
         with st.chat_message("user"):
-            st.markdown(chat_input)
+            st.write(chat_input)
 
         # Display prompt in the history from the user
         st.session_state.question_history.append({"role": "user", "content": chat_input})
