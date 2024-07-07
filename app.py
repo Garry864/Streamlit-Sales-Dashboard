@@ -200,7 +200,7 @@ if chat_input := st.chat_input("Ask a question about the data"):
         answer = smart_df.chat(chat_input)
 
         with st.chat_message("assistant"):
-            st.markdown(answer)
+            st.write(answer)
         
         # Display answer in the history from the assistant
         answer_entry = {"role": "assistant", "content": answer}
